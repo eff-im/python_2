@@ -1,20 +1,20 @@
 # Задание 2
 def odometer(N):
-    V = 1
-    t = 1
-    itog = 0
+    V = 0
+    S = 0
+    t = 0
     for i in range(len(N)):
         if i % 2 == 0:
-            V = N[i]
-            #print('V -', V)
+            V = V + N[i]
+            #print(i + 1, '- итерация, V (Скорость) -', V)
         elif i % 2 != 0 and i != 0:
-            t = N[i] - 1
-            #print('t -', t)
-        S = V * t
-        itog += S 
-        #print('S -', S)
+            t = N[i]
+            #print(i + 1, '- итерация, t (Время) -', t)
+        #print('')
+    S = V * t
+    #print('S (Расстояние) -', S)
+    return S
 
-    return itog
+#print(odometer([20,2,30,6,10,7]))
 
-#print(odometer([10, 1, 20, 2, 30, 3]))
     
